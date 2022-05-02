@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.apache.catalina.realm.UserDatabaseRealm.getRoles;
-
 @Service
 public class SecurityDatabaseService implements UserDetailsService {
 
@@ -30,7 +28,7 @@ public class SecurityDatabaseService implements UserDetailsService {
         userEntity.getRoles().forEach(role -> {
             authorities.add(new SimpleGrantedAuthority("ROLE_" + role));
         });
-    UserDetails user = new org.springframework.security.core.userdetails.User(userEntity.getUserName(),
+    UserDetails user = new org.springframework.security.core.userdetails.User(userEntity.getUsername(),
             userEntity.getPassword(),
             authorities);
     return user;

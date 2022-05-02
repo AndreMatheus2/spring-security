@@ -15,7 +15,7 @@ public class User {
     @Column(length = 50, nullable = false)
     private String name;
     @Column(length = 20, nullable = false)
-    private String userName;
+    private String username;
     @Column(length = 100, nullable = false)
     private String password;
     @ElementCollection(fetch = FetchType.EAGER)
@@ -27,7 +27,7 @@ public class User {
 
     }
 
-    public User(String userName){
+    public User(String username){
 
     }
 
@@ -47,12 +47,12 @@ public class User {
         this.name = name;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

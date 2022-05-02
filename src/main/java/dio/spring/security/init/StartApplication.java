@@ -20,7 +20,7 @@ public class StartApplication implements CommandLineRunner {
         if (user == null) {
             user = new User();
             user.setName("ADMIN");
-            user.setUserName("admin");
+            user.setUsername("admin");
             user.setPassword("master123");
             user.getRoles().add("MANAGERS");
             repository.save(user);
@@ -29,7 +29,7 @@ public class StartApplication implements CommandLineRunner {
         if (user == null) {
             user = new User();
             user.setName("USER");
-            user.setUserName("user");
+            user.setUsername("user");
             user.setPassword("user123");
             user.getRoles().add("USERS");
             repository.save(user);

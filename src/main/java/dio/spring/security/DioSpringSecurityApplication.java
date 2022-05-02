@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DioSpringSecurityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DioSpringSecurityApplication.class, args);
+ 		SpringApplication.run(DioSpringSecurityApplication.class, args);
 	}
 
 }
